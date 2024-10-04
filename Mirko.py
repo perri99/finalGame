@@ -1,7 +1,7 @@
 class Mirko:
     def __init__(self):
         self.punteggio = 0
-        print("MUAHAHAHA sono Mirko, OOP Senior programmer, Game director e docente IT")
+        print("\nMUAHAHAHA sono Mirko, OOP Senior programmer, Game director e docente IT")
         print("Per battermi dovrai affrontare la mia armata di domande sull'OOP. Al mio segnale scatenate l'Astrazionee!\n")
 
 
@@ -36,6 +36,7 @@ class Mirko:
             if uno.lower() in risposte:
                 print("Bene! Ne serve un'altra!")
                 count +=1
+                risposte.remove(uno.lower())
             else:
                 print("Male! Hai altri due tentativi!")
 
@@ -49,8 +50,8 @@ class Mirko:
             elif due.lower() in risposte and count == 0:
                 print("Bene! Ne serve un'altra!")
                 count+=1
+                risposte.remove(due.lower())
             
-
             tre = input("Terza risposta: ")
             if tre.lower() in risposte and count == 1:
                 print("Bene! Sei un degno avversario!")
@@ -67,19 +68,19 @@ class Mirko:
             print("Hai superato tutte le sfide! Sei un vero mago dell'OOP!")
             x = input("Domanda bonus:\nQual è la caratteristica migliore dell'OOP? ")
             if x.lower() == 'astrazione':
-                print("Ah, l'Astrazione! Il potere più arcano dell'OOP. Solo i programmatori più saggi comprendono il suo vero significato. Come un antico incantatore che cela il complesso dietro veli invisibili, così l'astrazione nasconde i dettagli del codice, mostrando solo ciò che è necessario. Ricorda, giovane apprendista: la chiave per dominare l'OOP è vedere oltre il codice, rendendo semplici anche i meccanismi più intricati. Al mio segnale... SCATENATE L'ASTRAZIONE!\n")
-                print("Hai guadagnato un consiglio per la prossima sfida: le risposte giuste sono sbagliate!")
+                print("Ah, l'Astrazione! Il potere più arcano dell'OOP. Solo i programmatori più saggi comprendono il suo vero significato.\nCome un antico incantatore che cela il complesso dietro veli invisibili, così l'astrazione nasconde i dettagli del codice, \nmostrando solo ciò che è necessario. Ricorda, giovane apprendista: la chiave per dominare l'OOP è\nvedere oltre il codice, rendendo semplici anche i meccanismi più intricati. Al mio segnale... SCATENATE L'ASTRAZIONE!\n")
+                print("Hai guadagnato un consiglio per la prossima sfida: le risposte giuste sono sbagliate!\n")
             else:
-                print("Hai fallito la domanda bonus! Non ti sarà concesso alcun consiglio!")
+                print("Hai fallito la domanda bonus! Non ti sarà concesso alcun consiglio!\n")
             return True
         elif self.punteggio == 2:
-            print("Hai superato due sfide, me la accollo!")
+            print("Hai superato due sfide, me la accollo!\n")
             return True
         elif self.punteggio == 1:
-            print("Hai superato una sola sfida..!")
+            print("Hai superato una sola sfida..!\n")
             return False
         else:
-            print("Hai fallito tutte le sfide! Non sei degno dell'astrazione!")
+            print("Hai fallito tutte le sfide! Non sei degno dell'astrazione!\n")
             return False
 
 mirko = Mirko()
