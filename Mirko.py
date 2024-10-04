@@ -82,11 +82,12 @@ class Mirko:
             print("Hai fallito tutte le sfide! Non sei degno dell'astrazione!")
             return False
 
-mirko = Mirko()
-mirko.prima_domanda()
-mirko.seconda_domanda()
-mirko.terza_domanda()
-mirko.risultato()
+if __name__ == '__main__':
+    mirko = Mirko()
+    mirko.prima_domanda()
+    mirko.seconda_domanda()
+    mirko.terza_domanda()
+    mirko.risultato()
         
         
         
